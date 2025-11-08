@@ -1,0 +1,7 @@
+
+import torch
+#https://leetgpu.com/challenges/matrix-transpose
+
+# input, output are tensors on the GPU
+def solve(input: torch.Tensor, output: torch.Tensor, rows: int, cols: int):
+    output.copy_(torch.transpose(input,0,1))
